@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/x-icon" href=".\frames\linklogo.jpg">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JEE-2026</title>
+    <script>
+      var elem = document.documentElement;
+
+      function openFullscreen() {
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) {
+          elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) {
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+          elem = window.top.document.body;
+          elem.msRequestFullscreen();
+        }
+      }
+
+      function closeFullscreen() {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          window.top.document.msExitFullscreen();
+        }
+      }
+
+      var output = document.getElementById("myP");
+      document.addEventListener("fullscreenchange", function () {
+        output.innerHTML = "fullscreenchange event fired!";
+      });
+      document.addEventListener("mozfullscreenchange", function () {
+        output.innerHTML = "mozfullscreenchange event fired!";
+      });
+      document.addEventListener("webkitfullscreenchange", function () {
+        output.innerHTML = "webkitfullscreenchange event fired!";
+      });
+      document.addEventListener("msfullscreenchange", function () {
+        output.innerHTML = "msfullscreenchange event fired!";
+      });
+    </script>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      #container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      #main {
+        flex: 1;
+        background-color: #f0f0f0;
+        overflow: auto;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        float: left;
+        padding: 10px 25px;
+      }
+      li a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        background-color: rgb(126, 116, 116);
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(126, 116, 116);
+        border-style: solid;
+        border-width: 3px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .d {
+        display: inline-block;
+      }
+      .e {
+        display: none;
+        color: white;
+        position: absolute;
+        text-align: center;
+        min-width: 100px;
+      }
+      .d:hover .e {
+        display: block;
+      }
+      #title {
+        background-color: rgba(155, 145, 194, 0.518);
+        text-align: center;
+        padding: 8px 8px;
+        font-family: cursive;
+        font-size: 130%;
+        border-style: solid;
+      }
+      #l {
+        background-color: darkkhaki;
+        padding: 270px 270px;
+        font-size: 50px;
+        text-align: center;
+      }
+      .o {
+        height: 500px;
+        width: 1000px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .iframe-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      }
+
+      .iframe-container iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+      #b1 {
+        background-color: rgb(58, 215, 44);
+        padding: 5px 5px;
+        border-radius: 15px;
+        color: rgb(237, 243, 248);
+        font-size: 15px;
+        border-color: rgb(58, 215, 44);
+      }
+      #b2 {
+        background-color: rgb(225, 78, 132);
+        padding: 5px 5px;
+        border-radius: 15px;
+        color: rgb(237, 243, 248);
+        font-size: 15px;
+        border-color: rgb(225, 78, 132);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="title">
+      <button onclick="openFullscreen();" id="b1">Go Fullscreen Mode</button>
+
+      <a href=".\frames\frame\mainframe.html" target="mainframe">JEE-2026</a>
+      <button onclick="closeFullscreen();" id="b2">Close Fullscreen</button>
+    </div>
+    <ul>
+      <li class="d">
+        <a href=".\frames\frame\mainframe.html" target="mainframe">Home</a>
+      </li>
+      <li class="d">
+        <a href=".\frames\frame\fullstackdevframe.html" target="mainframe">MATHS</a>
+      </li>
+      <li class="d">
+        <a href=".\frames\frame\jsframe.html" target="mainframe">PHYSICS</a>
+      </li>
+      <li class="d">
+        <a href=".\frames\frame\fullstackpythonframe.html" target="mainframe"
+          >CHEMISTRY</a
+        >
+      </li>
+      <!--
+      <li class="d">
+        <a href=".\frames\frame\fullstackjavaframe.html" target="mainframe"
+          >Java</a
+        >
+      </li>
+      <li class="d">
+        <a href=".\frames\frame\aimlframe.html" target="mainframe">AIML</a>
+      </li>
+      <li class="d">
+        <a href=".\frames\frame\datasciencerframe.html" target="mainframe"
+          >Data Science</a
+        >
+      </li>
+      <li class="d">
+        <a href=".\frames\frame\cybersecurityframe.html" target="mainframe"
+          >Cyber Security</a
+        >
+      </li>
+      <li class="d">
+        <a href=".\frames\frame\datastructuresframe.html" target="mainframe"
+          >Data Structures in C</a
+        >
+      </li>
+      -->
+    </ul>
+    <div class="iframe-container">
+      <iframe
+        id="main"
+        src=".\frames\frame\mainframe.html"
+        frameborder="10"
+        name="mainframe"
+      ></iframe>
+    </div>
+  </body>
+</html>
